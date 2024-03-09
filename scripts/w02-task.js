@@ -5,14 +5,14 @@
 /* Step 2 - Variables */
 const fullName = "Quadri Kolawole";
 let currentYear = "2024";
-let profilePicture = "images\profilePic.jpg";
+let profilePicture = "images/profilePic.jpg";
 
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
-const yearElement = document.querySelector("#year");
-const imageElement = document.querySelector("image");
+const yearElement = document.getElementById("year");
+const imageElement = document.querySelector("img");
 
 
 /* Step 4 - Adding Content */
@@ -24,7 +24,19 @@ imageElement.setAttribute("alt", `Profile image of ${fullName}`);
 
 /* Step 5 - Array */
 let favouriteFood = ["Apple", "Watermelon", "Cucumber", "Rice", "Beans"];
-foodElement.innerHTML = favouriteFood;
+// favouriteFood.forEach(food => {
+//     foodElement.innerHTML += `<div>${food}</div>`;
+// });
 let newFood = "Carrot";
-favouriteFood.push(newFood);
-foodElement.innerHTML += <br>${favouriteFood}</br>;
+// favouriteFood.push(newFood)
+// {
+//     foodElement.innerHTML += `<div>${newFood}</div>`;
+// }
+favouriteFood.shift();
+// favouriteFood.forEach(food => {
+//     foodElement.innerHTML += `<div>${food}</div>`;
+// });
+favouriteFood.pop();
+favouriteFood.forEach(food => {
+    foodElement.innerHTML += `<div>${food}</div>`;
+});
