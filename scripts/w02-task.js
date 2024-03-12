@@ -24,19 +24,14 @@ imageElement.setAttribute("alt", `Profile image of ${fullName}`);
 
 /* Step 5 - Array */
 let favouriteFood = ["Apple", "Watermelon", "Cucumber", "Rice", "Beans"];
-// favouriteFood.forEach(food => {
-//     foodElement.innerHTML += `<div>${food}</div>`;
-// });
+foodElement.innerHTML += `<br>${favouriteFood}`;
+
 let newFood = "Carrot";
-// favouriteFood.push(newFood)
-// {
-//     foodElement.innerHTML += `<div>${newFood}</div>`;
-// }
+favouriteFood.push(newFood);
+foodElement.innerHTML += `<br>${favouriteFood}`;
+
 favouriteFood.shift();
-// favouriteFood.forEach(food => {
-//     foodElement.innerHTML += `<div>${food}</div>`;
-// });
+foodElement.innerHTML += `<br>${favouriteFood}`;
+
 favouriteFood.pop();
-favouriteFood.forEach(food => {
-    foodElement.innerHTML += `<div>${food}</div>`;
-});
+foodElement.innerHTML += `<br>${favouriteFood}`;
