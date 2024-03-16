@@ -45,21 +45,19 @@ function divideNumbers() {
 }
 document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
 
+
 /* Decision Structure */
 document.getElementById("getTotal").addEventListener("click", function() {
-    // Declare and instantiate a variable to store the numeric value entered by the user in the subtotal field
     let subtotal = parseFloat(document.getElementById("subtotal").value);
   
-    // Check if the membership checkbox is checked
     let isMember = document.getElementById("member").checked;
   
-    // Apply a 20% discount if the membership checkbox is checked
     let discount = isMember ? subtotal * 0.20 : 0;
     let totalDue = subtotal - discount;
   
-    // Output the total to the 'totalSpan' with two decimals using a template string
     document.getElementById("total").textContent = `$${totalDue.toFixed(2)}`;
   });
+  
   
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
